@@ -9,13 +9,16 @@
 import UIKit
 
 class TrendingViewController: UIViewController {
-    @IBOutlet var scrollView: UIScrollView!
-
     
     @IBOutlet var feedView: UIImageView!
+    @IBOutlet var scrollView: UIScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //scrollView.contentSize = feedView.image!.size
         scrollView.contentSize = feedView.image!.size
+        
         // Do any additional setup after loading the view.scrollView.contentSize = CGSize(width: 320, height: 1568)
     }
 

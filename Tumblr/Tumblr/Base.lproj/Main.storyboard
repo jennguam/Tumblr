@@ -227,7 +227,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1217"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pHD-v2-GlA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MX9-ZO-Npd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -244,6 +244,7 @@
                     <size key="freeformSize" width="320" height="1217"/>
                     <connections>
                         <outlet property="feedView" destination="TFw-h5-h2W" id="ayH-DH-MLU"/>
+                        <outlet property="scrollView" destination="MX9-ZO-Npd" id="24e-EG-1im"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eX5-r9-gp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
