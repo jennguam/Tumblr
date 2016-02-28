@@ -93,39 +93,50 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func nevermindButton(sender: AnyObject) {
-        //    Tapping the "Nevermind" button should dismiss the ComposeViewController.
-//        UIView.animateWithDuration(0.2, delay: 0, options: [], animations: { () -> Void in
-//            self.photoButton.center.y = self.origPhoto.y
-//            
-//            }, completion: { (Bool) -> Void in
-//                UIView.animateWithDuration(0.2, animations: { () -> Void in
-//                    self.quoteButton.center.y -= 402
-//                })
-//                
-//        })
+        //Tapping the "Nevermind" button should dismiss the ComposeViewController.
+        UIView.animateWithDuration(0.2, delay: 0, options: [], animations: { () -> Void in
+            self.photoButton.center.y -= 1000
+            
+            }, completion: { (Bool) -> Void in
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    self.quoteButton.center.y -= 1000
+                })
+                
+        })
+        
+        UIView.animateWithDuration(0.25, delay: 0.1, options: [], animations: { () -> Void in
+            self.textButton.center.y -= 1000
+            
+            }, completion: { (Bool) -> Void in
+                UIView.animateWithDuration(0.15, animations: { () -> Void in
+                    self.chatButton.center.y -= 1000
+                })
+                
+        })
+        
+        UIView.animateWithDuration(0.35, delay: 0.2, options: [], animations: { () -> Void in
+            self.linkButton.center.y -= 1000
+            
+            }, completion: { (Bool) -> Void in
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.videoButton.center.y -= 1000
+                    }, completion: { (Bool) -> Void in
+                        self.dismissComposeModal(self)
+                })
+        })
 //        
-//        UIView.animateWithDuration(0.25, delay: 0.1, options: [], animations: { () -> Void in
-//            self.textButton.center.y -= 402
+//        UIView.animateWithDuration(NSTimeInterval(0.2), delay: NSTimeInterval(2), options: [], animations: {
 //            
-//            }, completion: { (Bool) -> Void in
-//                UIView.animateWithDuration(0.15, animations: { () -> Void in
-//                    self.chatButton.center.y -= 402
-//                })
-//                
-//        })
+//            }, completion: nil)
+//        UIView.animateWithDuration(1) { () -> Void in
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//        }
 //        
-//        UIView.animateWithDuration(0.35, delay: 0.2, options: [], animations: { () -> Void in
-//            self.linkButton.center.y -= 402
-//            
-//            }, completion: { (Bool) -> Void in
-//                UIView.animateWithDuration(0.3, animations: { () -> Void in
-//                    self.videoButton.center.y -= 402
-//                })
-//                
-//        })
 
-        dismissViewControllerAnimated(true, completion: nil)
-
+    }
+    
+    func dismissComposeModal(vw: ComposeViewController) {
+        vw.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
