@@ -32,9 +32,14 @@ class ComposeViewController: UIViewController {
         origLink = CGPoint(x: linkButton.center.x, y: linkButton.center.y)
         origChat = CGPoint(x: chatButton.center.x, y: chatButton.center.y)
         origVideo =  CGPoint(x: videoButton.center.x, y: videoButton.center.y)
-        
+//        view.backgroundColor = UIColor.clearColor()
+//        view.opaque = false
         // Do any additional setup after loading the view.
     }
+    func moveButton(button: UIImageView){
+        button.center.y += 402
+    }
+
     override func viewWillAppear(animated: Bool) {
         //    Within the viewWillAppear method, set the initial positions of the compose buttons to below the screen.
         
@@ -45,9 +50,6 @@ class ComposeViewController: UIViewController {
         
     }
     
-    func moveButton(button: UIImageView){
-        button.center.y += 402
-    }
     
     override func viewDidAppear(animated: Bool) {
         //super??
@@ -89,8 +91,39 @@ class ComposeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func nevermindButton(sender: AnyObject) {
         //    Tapping the "Nevermind" button should dismiss the ComposeViewController.
+//        UIView.animateWithDuration(0.2, delay: 0, options: [], animations: { () -> Void in
+//            self.photoButton.center.y = self.origPhoto.y
+//            
+//            }, completion: { (Bool) -> Void in
+//                UIView.animateWithDuration(0.2, animations: { () -> Void in
+//                    self.quoteButton.center.y -= 402
+//                })
+//                
+//        })
+//        
+//        UIView.animateWithDuration(0.25, delay: 0.1, options: [], animations: { () -> Void in
+//            self.textButton.center.y -= 402
+//            
+//            }, completion: { (Bool) -> Void in
+//                UIView.animateWithDuration(0.15, animations: { () -> Void in
+//                    self.chatButton.center.y -= 402
+//                })
+//                
+//        })
+//        
+//        UIView.animateWithDuration(0.35, delay: 0.2, options: [], animations: { () -> Void in
+//            self.linkButton.center.y -= 402
+//            
+//            }, completion: { (Bool) -> Void in
+//                UIView.animateWithDuration(0.3, animations: { () -> Void in
+//                    self.videoButton.center.y -= 402
+//                })
+//                
+//        })
+
         dismissViewControllerAnimated(true, completion: nil)
 
     }

@@ -44,7 +44,9 @@ class TabBarViewController: UIViewController {
    
     @IBAction func onComposeButton(sender: AnyObject) {
         composeViewController.view.frame = contentView.bounds
-        contentView.addSubview(composeViewController.view)
+//        composeViewController.view.backgroundColor = UIColor.clearColor()
+//        presentingViewController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+//        presentingViewController.presentViewController(self, animated: true completion: nil)
 
     }
     
