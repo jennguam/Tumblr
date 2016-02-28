@@ -1,23 +1,19 @@
 //
-//  TrendingViewController.swift
+//  LoginViewController.swift
 //  Tumblr
 //
-//  Created by Jenn Leung on 2/26/16.
+//  Created by Jenn Leung on 2/28/16.
 //  Copyright © 2016 Jenn Leung. All rights reserved.
 //
 
 import UIKit
 
-class TrendingViewController: UIViewController {
-    
-    @IBOutlet var feedView: UIImageView!
-    @IBOutlet var scrollView: UIScrollView!
-    
-    
+class LoginViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //scrollView.contentSize = feedView.image!.size
-        scrollView.contentSize = feedView.image!.size
+        
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +21,9 @@ class TrendingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onCancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
